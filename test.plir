@@ -1,0 +1,52 @@
+!assembly-name: Test;
+
+class[public static] "Test.StaticTest": [!]"System.Object"
+{
+    field[private static] __test: [!]"System.String";
+    method[public static] ".sctor"() 2 => [!]"System.Void"
+    {
+        Load_u64 0 10;
+        InstanceCall 0 "ToString()" 1;
+        SetField 1 __test;
+    }
+    method[public static] Main([!]"System.Array`1"[@T:[!]"System.String"]) 10 => [!]"System.Void"
+    {
+        StaticCall ["Test"]"Test.StaticTest" "PrintStaticsAndGenericType()" 1;
+        NewObject [Test]"Test.GenericTest`2"[@T: [!]"System.Boolean"|@U: [!]"System.Array`1"[@T: [!]"System.Boolean"]] ".ctor()" 2;
+        Load_u64 1 0;
+        InstanceCall 2 "GenericMethod`1(@Z)[@Z:[!]System.UInt64]" 2 1;
+        ReturnVal 1;
+    }
+    method[public static] PrintStaticsAndGenericType() 2 => [!]"System.Void"
+    {
+        LoadStatic 0 ["Test"]"Test.StaticTest" __test;
+        StaticCall [!]"System.Console" "WriteLine([!]System.String)" 1 0;
+    }
+}
+
+class[public] "Test.Test": [!]"System.Object"
+{
+    field[] __test: [!]"System.String";
+}
+
+class[public] "Test.GenericTest`2"<@T, @U>:[!]"System.Object"
+where
+    T: [!]"System.Object";
+    U: [!]"System.Array`1"[@T: @T];
+{
+    field[private] __object_array: [!]"System.Array`1"[@T:[!]"System.Boolean"];
+    field[in-assembly] __a: @T;
+    method[public] ".ctor"() 2 => [!]"System.Void"
+    {
+        LoadTrue 0;
+        SetField 0 __a;
+        NewObject [!]"System.Array`1"[@T:[!]"System.Boolean"] ".ctor()" 1;
+    }
+    method[public] "GenericMethod`1"<@Z>(@Z) 2 => [!]"System.Void"
+    where
+        Z: [!]"System.Object";
+    {
+        LoadArg 0 0;
+        StaticCall [!]"System.Console" "WriteLine([!]System.String)" 1 0;
+    }
+}

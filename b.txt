@@ -1,0 +1,1643 @@
+warning: unused import: `Display`
+ --> D:\pure_lang\global\src\string_reference.rs:3:19
+  |
+3 | use derive_more::{Display, Unwrap};
+  |                   ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::cell::OnceCell`
+ --> D:\pure_lang\global\src\string_reference.rs:6:5
+  |
+6 | use std::cell::OnceCell;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::str::FromStr`
+ --> D:\pure_lang\global\src\string_reference.rs:8:5
+  |
+8 | use std::str::FromStr;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `OnceLock`
+ --> D:\pure_lang\global\src\string_reference.rs:9:27
+  |
+9 | use std::sync::{LazyLock, OnceLock};
+  |                           ^^^^^^^^
+
+warning: unused import: `ParseBuffer`
+ --> D:\pure_lang\binary\crates\proc_macros\src\read_from_file.rs:4:25
+  |
+4 | use syn::parse::{Parse, ParseBuffer, ParseStream, Parser};
+  |                         ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: variable `repr` is assigned to, but never used
+  --> D:\pure_lang\binary\crates\proc_macros\src\read_from_file.rs:95:21
+   |
+95 |             let mut repr = quote!();
+   |                     ^^^^
+   |
+   = note: consider using `_repr` instead
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: value assigned to `repr` is never read
+   --> D:\pure_lang\binary\crates\proc_macros\src\read_from_file.rs:107:21
+    |
+107 |                     repr = quote!(#[repr(#v)]);
+    |                     ^^^^
+    |
+    = help: maybe it is overwritten before being read?
+    = note: `#[warn(unused_assignments)]` on by default
+
+warning: unused variable: `global_crate`
+  --> D:\pure_lang\binary\crates\proc_macros\src\read_from_file.rs:30:21
+   |
+30 |                 let global_crate = &get_crate_name_of("pure_lang_global", x.span());
+   |                     ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_global_crate`
+
+warning: unused variable: `idents`
+  --> D:\pure_lang\binary\crates\proc_macros\src\write_to_file.rs:51:21
+   |
+51 |                 let idents = variants.iter().map(|x| &x.ident);
+   |                     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_idents`
+
+warning: unused variable: `vars`
+  --> D:\pure_lang\binary\crates\proc_macros\src\write_to_file.rs:52:21
+   |
+52 |                 let vars = variants.iter().enumerate().map(|(i, x)| {
+   |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_vars`
+
+warning: variable `repr` is assigned to, but never used
+  --> D:\pure_lang\binary\crates\proc_macros\src\write_to_file.rs:79:21
+   |
+79 |             let mut repr = quote!();
+   |                     ^^^^
+   |
+   = note: consider using `_repr` instead
+
+warning: value assigned to `repr` is never read
+  --> D:\pure_lang\binary\crates\proc_macros\src\write_to_file.rs:91:21
+   |
+91 |                     repr = quote!(#[repr(#v)]);
+   |                     ^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: unused variable: `type_ident`
+  --> D:\pure_lang\binary\crates\proc_macros\src\write_to_file.rs:95:17
+   |
+95 |             let type_ident = Ident::new(&format!("{name}Type"), Span::call_site());
+   |                 ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_type_ident`
+
+warning: `pure_lang_global` (lib) generated 4 warnings (run `cargo fix --lib -p pure_lang_global` to apply 4 suggestions)
+warning: `pure_lang_binary_proc_macros` (lib) generated 9 warnings (run `cargo fix --lib -p pure_lang_binary_proc_macros` to apply 1 suggestion)
+warning: unused import: `crate::Error`
+ --> D:\pure_lang\binary\src\traits\implementations.rs:1:5
+  |
+1 | use crate::Error;
+  |     ^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `string_name`
+  --> D:\pure_lang\binary\src\traits\implementations.rs:10:80
+   |
+10 | use global::{IndexMap, StringMethodReference, StringName, StringTypeReference, string_name};
+   |                                                                                ^^^^^^^^^^^
+
+warning: unused import: `std::io::Seek`
+  --> D:\pure_lang\binary\src\traits\implementations.rs:15:5
+   |
+15 | use std::io::Seek;
+   |     ^^^^^^^^^^^^^
+
+warning: unused import: `StringName`
+ --> D:\pure_lang\binary\src\ty.rs:3:14
+  |
+3 | use global::{StringName, StringTypeReference, WithType};
+  |              ^^^^^^^^^^
+
+warning: unused import: `FieldAttr`
+ --> D:\pure_lang\binary\src\ty\class.rs:3:21
+  |
+3 | use global::attrs::{FieldAttr, TypeAttr};
+  |                     ^^^^^^^^^
+
+warning: constant `MAGIC` is never used
+  --> D:\pure_lang\binary\src\assembly.rs:16:7
+   |
+16 | const MAGIC: [u8; 2] = *b"PL";
+   |       ^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: struct `Header` is never constructed
+  --> D:\pure_lang\binary\src\assembly.rs:19:8
+   |
+19 | struct Header {
+   |        ^^^^^^
+
+warning: method `check` is never used
+  --> D:\pure_lang\binary\src\assembly.rs:24:8
+   |
+23 | impl Header {
+   | ----------- method in this implementation
+24 |     fn check(&self) -> global::Result<()> {
+   |        ^^^^^
+
+warning: `pure_lang_binary` (lib) generated 8 warnings (run `cargo fix --lib -p pure_lang_binary` to apply 5 suggestions)
+   Compiling pure_lang_compiler4pure_lang_ir v0.1.0 (D:\pure_lang_compilers\pure_lang_ir)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.22s
+     Running unittests src\lib.rs (target\debug\deps\Compiler_PurelangIR-be2336950d0ef080.exe)
+[src\str_parser\tests.rs:10:5] &file = File {
+    asts: [
+        SetAssemblyName(
+            SetAssemblyNameAst {
+                ch_exclamation_mark: WithSpan {
+                    kind: SpecialChar(
+                        ExclamationMark,
+                    ),
+                    content: "!",
+                    pos: 0,
+                    len: 1,
+                },
+                kw_assembly_name: WithSpan {
+                    kind: Keyword(
+                        AssemblyName,
+                    ),
+                    content: "assembly-name",
+                    pos: 1,
+                    len: 13,
+                },
+                ch_colon: WithSpan {
+                    kind: SpecialChar(
+                        Colon,
+                    ),
+                    content: ":",
+                    pos: 14,
+                    len: 1,
+                },
+                name: WithSpan {
+                    kind: Identifier,
+                    content: "Test",
+                    pos: 16,
+                    len: 4,
+                },
+                ch_semicolon: WithSpan {
+                    kind: SpecialChar(
+                        Semicolon,
+                    ),
+                    content: ";",
+                    pos: 20,
+                    len: 1,
+                },
+            },
+        ),
+        TypeDef(
+            Class(
+                ClassDef {
+                    kw_class: WithSpan {
+                        kind: Keyword(
+                            Class,
+                        ),
+                        content: "class",
+                        pos: 23,
+                        len: 5,
+                    },
+                    ch_bracket_open0: WithSpan {
+                        kind: SpecialChar(
+                            BracketOpen,
+                        ),
+                        content: "[",
+                        pos: 28,
+                        len: 1,
+                    },
+                    modifiers: [
+                        WithSpan {
+                            kind: Keyword(
+                                Public,
+                            ),
+                            content: "public",
+                            pos: 29,
+                            len: 6,
+                        },
+                        WithSpan {
+                            kind: Keyword(
+                                Static,
+                            ),
+                            content: "static",
+                            pos: 36,
+                            len: 6,
+                        },
+                    ],
+                    ch_bracket_close0: WithSpan {
+                        kind: SpecialChar(
+                            BracketClose,
+                        ),
+                        content: "]",
+                        pos: 42,
+                        len: 1,
+                    },
+                    name: WithSpan {
+                        kind: String,
+                        content: "Test.StaticTest",
+                        pos: 44,
+                        len: 15,
+                    },
+                    generics: None,
+                    parent_with_colon: Some(
+                        (
+                            WithSpan {
+                                kind: SpecialChar(
+                                    Colon,
+                                ),
+                                content: ":",
+                                pos: 61,
+                                len: 1,
+                            },
+                            WithSpan {
+                                kind: (),
+                                content: Single {
+                                    assem: "!",
+                                    ty: "System.Object",
+                                },
+                                pos: 63,
+                                len: 19,
+                            },
+                        ),
+                    ),
+                    where_clauses: None,
+                    ch_brace_open0: WithSpan {
+                        kind: SpecialChar(
+                            BraceOpen,
+                        ),
+                        content: "{",
+                        pos: 82,
+                        len: 1,
+                    },
+                    class_items: [
+                        Field(
+                            Field {
+                                kw_field: WithSpan {
+                                    kind: Keyword(
+                                        Field,
+                                    ),
+                                    content: "field",
+                                    pos: 88,
+                                    len: 5,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 93,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Private,
+                                        ),
+                                        content: "private",
+                                        pos: 94,
+                                        len: 7,
+                                    },
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Static,
+                                        ),
+                                        content: "static",
+                                        pos: 102,
+                                        len: 6,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 108,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "__test",
+                                    pos: 110,
+                                    len: 6,
+                                },
+                                ch_colon: WithSpan {
+                                    kind: SpecialChar(
+                                        Colon,
+                                    ),
+                                    content: ":",
+                                    pos: 116,
+                                    len: 1,
+                                },
+                                ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.String",
+                                    },
+                                    pos: 118,
+                                    len: 19,
+                                },
+                                ch_semicolon: WithSpan {
+                                    kind: SpecialChar(
+                                        Semicolon,
+                                    ),
+                                    content: ";",
+                                    pos: 136,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                        Method(
+                            Method {
+                                kw_method: WithSpan {
+                                    kind: Keyword(
+                                        Method,
+                                    ),
+                                    content: "method",
+                                    pos: 142,
+                                    len: 6,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 148,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Public,
+                                        ),
+                                        content: "public",
+                                        pos: 149,
+                                        len: 6,
+                                    },
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Static,
+                                        ),
+                                        content: "static",
+                                        pos: 156,
+                                        len: 6,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 162,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: String,
+                                    content: ".sctor",
+                                    pos: 164,
+                                    len: 6,
+                                },
+                                generics: None,
+                                ch_parenthesis_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisOpen,
+                                    ),
+                                    content: "(",
+                                    pos: 172,
+                                    len: 1,
+                                },
+                                arguments: Punctuated {
+                                    inner: [],
+                                    last: None,
+                                },
+                                ch_parenthesis_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisClose,
+                                    ),
+                                    content: ")",
+                                    pos: 173,
+                                    len: 1,
+                                },
+                                ch_arrow: WithSpan {
+                                    kind: SpecialChar(
+                                        Arrow,
+                                    ),
+                                    content: "=>",
+                                    pos: 175,
+                                    len: 2,
+                                },
+                                ret_ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.Void",
+                                    },
+                                    pos: 178,
+                                    len: 17,
+                                },
+                                where_clauses: None,
+                                ch_brace_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceOpen,
+                                    ),
+                                    content: "{",
+                                    pos: 199,
+                                    len: 1,
+                                },
+                                statements: [
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: Load_u64 {
+                                                register_addr: 0,
+                                                val: 10,
+                                            },
+                                            pos: 209,
+                                            len: 13,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 222,
+                                            len: 1,
+                                        },
+                                    ),
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: InstanceCall {
+                                                val: 0,
+                                                method: Single(
+                                                    "ToString()",
+                                                ),
+                                                args: [],
+                                                ret_at: 1,
+                                            },
+                                            pos: 223,
+                                            len: 38,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 261,
+                                            len: 1,
+                                        },
+                                    ),
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: SetField {
+                                                register_addr: 1,
+                                                field: "__test",
+                                            },
+                                            pos: 262,
+                                            len: 26,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 288,
+                                            len: 1,
+                                        },
+                                    ),
+                                ],
+                                ch_brace_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceClose,
+                                    ),
+                                    content: "}",
+                                    pos: 294,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                        Method(
+                            Method {
+                                kw_method: WithSpan {
+                                    kind: Keyword(
+                                        Method,
+                                    ),
+                                    content: "method",
+                                    pos: 300,
+                                    len: 6,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 306,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Public,
+                                        ),
+                                        content: "public",
+                                        pos: 307,
+                                        len: 6,
+                                    },
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Static,
+                                        ),
+                                        content: "static",
+                                        pos: 314,
+                                        len: 6,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 320,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "Main",
+                                    pos: 322,
+                                    len: 4,
+                                },
+                                generics: None,
+                                ch_parenthesis_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisOpen,
+                                    ),
+                                    content: "(",
+                                    pos: 326,
+                                    len: 1,
+                                },
+                                arguments: Punctuated {
+                                    inner: [],
+                                    last: Some(
+                                        WithSpan {
+                                            kind: (),
+                                            content: WithGeneric {
+                                                assem: "!",
+                                                ty: "System.Array`1",
+                                                type_vars: {
+                                                    "@T": Single {
+                                                        assem: "!",
+                                                        ty: "System.String",
+                                                    },
+                                                },
+                                            },
+                                            pos: 327,
+                                            len: 43,
+                                        },
+                                    ),
+                                },
+                                ch_parenthesis_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisClose,
+                                    ),
+                                    content: ")",
+                                    pos: 369,
+                                    len: 1,
+                                },
+                                ch_arrow: WithSpan {
+                                    kind: SpecialChar(
+                                        Arrow,
+                                    ),
+                                    content: "=>",
+                                    pos: 371,
+                                    len: 2,
+                                },
+                                ret_ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.Void",
+                                    },
+                                    pos: 374,
+                                    len: 17,
+                                },
+                                where_clauses: None,
+                                ch_brace_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceOpen,
+                                    ),
+                                    content: "{",
+                                    pos: 395,
+                                    len: 1,
+                                },
+                                statements: [
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: StaticCall {
+                                                ty: Single {
+                                                    assem: "Test",
+                                                    ty: "Test.StaticTest",
+                                                },
+                                                method: Single(
+                                                    "PrintStaticsAndGenericType()",
+                                                ),
+                                                args: [],
+                                                ret_at: 1,
+                                            },
+                                            pos: 405,
+                                            len: 69,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 474,
+                                            len: 1,
+                                        },
+                                    ),
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: Load_u64 {
+                                                register_addr: 1,
+                                                val: 0,
+                                            },
+                                            pos: 475,
+                                            len: 21,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 496,
+                                            len: 1,
+                                        },
+                                    ),
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: ReturnVal {
+                                                register_addr: 1,
+                                            },
+                                            pos: 497,
+                                            len: 20,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 517,
+                                            len: 1,
+                                        },
+                                    ),
+                                ],
+                                ch_brace_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceClose,
+                                    ),
+                                    content: "}",
+                                    pos: 523,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                        Method(
+                            Method {
+                                kw_method: WithSpan {
+                                    kind: Keyword(
+                                        Method,
+                                    ),
+                                    content: "method",
+                                    pos: 529,
+                                    len: 6,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 535,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Public,
+                                        ),
+                                        content: "public",
+                                        pos: 536,
+                                        len: 6,
+                                    },
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Static,
+                                        ),
+                                        content: "static",
+                                        pos: 543,
+                                        len: 6,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 549,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "PrintStaticsAndGenericType",
+                                    pos: 551,
+                                    len: 26,
+                                },
+                                generics: None,
+                                ch_parenthesis_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisOpen,
+                                    ),
+                                    content: "(",
+                                    pos: 577,
+                                    len: 1,
+                                },
+                                arguments: Punctuated {
+                                    inner: [],
+                                    last: None,
+                                },
+                                ch_parenthesis_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisClose,
+                                    ),
+                                    content: ")",
+                                    pos: 578,
+                                    len: 1,
+                                },
+                                ch_arrow: WithSpan {
+                                    kind: SpecialChar(
+                                        Arrow,
+                                    ),
+                                    content: "=>",
+                                    pos: 580,
+                                    len: 2,
+                                },
+                                ret_ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.Void",
+                                    },
+                                    pos: 583,
+                                    len: 17,
+                                },
+                                where_clauses: None,
+                                ch_brace_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceOpen,
+                                    ),
+                                    content: "{",
+                                    pos: 604,
+                                    len: 1,
+                                },
+                                statements: [
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: LoadStatic {
+                                                register_addr: 0,
+                                                ty: Single {
+                                                    assem: "Test",
+                                                    ty: "Test.StaticTest",
+                                                },
+                                                name: "__test",
+                                            },
+                                            pos: 614,
+                                            len: 45,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 659,
+                                            len: 1,
+                                        },
+                                    ),
+                                    (
+                                        WithSpan {
+                                            kind: (),
+                                            content: StaticCall {
+                                                ty: Single {
+                                                    assem: "!",
+                                                    ty: "System.Console",
+                                                },
+                                                method: Single(
+                                                    "WriteLine([!]System.String)",
+                                                ),
+                                                args: [
+                                                    0,
+                                                ],
+                                                ret_at: 1,
+                                            },
+                                            pos: 660,
+                                            len: 73,
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Semicolon,
+                                            ),
+                                            content: ";",
+                                            pos: 733,
+                                            len: 1,
+                                        },
+                                    ),
+                                ],
+                                ch_brace_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceClose,
+                                    ),
+                                    content: "}",
+                                    pos: 739,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                    ],
+                    ch_brace_close0: WithSpan {
+                        kind: SpecialChar(
+                            BraceClose,
+                        ),
+                        content: "}",
+                        pos: 741,
+                        len: 1,
+                    },
+                },
+            ),
+        ),
+        TypeDef(
+            Class(
+                ClassDef {
+                    kw_class: WithSpan {
+                        kind: Keyword(
+                            Class,
+                        ),
+                        content: "class",
+                        pos: 744,
+                        len: 5,
+                    },
+                    ch_bracket_open0: WithSpan {
+                        kind: SpecialChar(
+                            BracketOpen,
+                        ),
+                        content: "[",
+                        pos: 749,
+                        len: 1,
+                    },
+                    modifiers: [
+                        WithSpan {
+                            kind: Keyword(
+                                Public,
+                            ),
+                            content: "public",
+                            pos: 750,
+                            len: 6,
+                        },
+                    ],
+                    ch_bracket_close0: WithSpan {
+                        kind: SpecialChar(
+                            BracketClose,
+                        ),
+                        content: "]",
+                        pos: 756,
+                        len: 1,
+                    },
+                    name: WithSpan {
+                        kind: String,
+                        content: "Test.Test",
+                        pos: 758,
+                        len: 9,
+                    },
+                    generics: None,
+                    parent_with_colon: Some(
+                        (
+                            WithSpan {
+                                kind: SpecialChar(
+                                    Colon,
+                                ),
+                                content: ":",
+                                pos: 769,
+                                len: 1,
+                            },
+                            WithSpan {
+                                kind: (),
+                                content: Single {
+                                    assem: "!",
+                                    ty: "System.Object",
+                                },
+                                pos: 771,
+                                len: 19,
+                            },
+                        ),
+                    ),
+                    where_clauses: None,
+                    ch_brace_open0: WithSpan {
+                        kind: SpecialChar(
+                            BraceOpen,
+                        ),
+                        content: "{",
+                        pos: 790,
+                        len: 1,
+                    },
+                    class_items: [
+                        Field(
+                            Field {
+                                kw_field: WithSpan {
+                                    kind: Keyword(
+                                        Field,
+                                    ),
+                                    content: "field",
+                                    pos: 796,
+                                    len: 5,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 801,
+                                    len: 1,
+                                },
+                                modifiers: [],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 802,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "__test",
+                                    pos: 804,
+                                    len: 6,
+                                },
+                                ch_colon: WithSpan {
+                                    kind: SpecialChar(
+                                        Colon,
+                                    ),
+                                    content: ":",
+                                    pos: 810,
+                                    len: 1,
+                                },
+                                ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.String",
+                                    },
+                                    pos: 812,
+                                    len: 19,
+                                },
+                                ch_semicolon: WithSpan {
+                                    kind: SpecialChar(
+                                        Semicolon,
+                                    ),
+                                    content: ";",
+                                    pos: 830,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                    ],
+                    ch_brace_close0: WithSpan {
+                        kind: SpecialChar(
+                            BraceClose,
+                        ),
+                        content: "}",
+                        pos: 832,
+                        len: 1,
+                    },
+                },
+            ),
+        ),
+        TypeDef(
+            Class(
+                ClassDef {
+                    kw_class: WithSpan {
+                        kind: Keyword(
+                            Class,
+                        ),
+                        content: "class",
+                        pos: 835,
+                        len: 5,
+                    },
+                    ch_bracket_open0: WithSpan {
+                        kind: SpecialChar(
+                            BracketOpen,
+                        ),
+                        content: "[",
+                        pos: 840,
+                        len: 1,
+                    },
+                    modifiers: [
+                        WithSpan {
+                            kind: Keyword(
+                                Public,
+                            ),
+                            content: "public",
+                            pos: 841,
+                            len: 6,
+                        },
+                    ],
+                    ch_bracket_close0: WithSpan {
+                        kind: SpecialChar(
+                            BracketClose,
+                        ),
+                        content: "]",
+                        pos: 847,
+                        len: 1,
+                    },
+                    name: WithSpan {
+                        kind: String,
+                        content: "Test.GenericTest`2",
+                        pos: 849,
+                        len: 18,
+                    },
+                    generics: Some(
+                        (
+                            WithSpan {
+                                kind: SpecialChar(
+                                    AngleBracketOpen,
+                                ),
+                                content: "<",
+                                pos: 869,
+                                len: 1,
+                            },
+                            Punctuated {
+                                inner: [
+                                    (
+                                        GenericDef {
+                                            ch_at: WithSpan {
+                                                kind: SpecialChar(
+                                                    At,
+                                                ),
+                                                content: "@",
+                                                pos: 870,
+                                                len: 1,
+                                            },
+                                            name: WithSpan {
+                                                kind: Identifier,
+                                                content: "T",
+                                                pos: 871,
+                                                len: 1,
+                                            },
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                Comma,
+                                            ),
+                                            content: ",",
+                                            pos: 872,
+                                            len: 1,
+                                        },
+                                    ),
+                                ],
+                                last: Some(
+                                    GenericDef {
+                                        ch_at: WithSpan {
+                                            kind: SpecialChar(
+                                                At,
+                                            ),
+                                            content: "@",
+                                            pos: 874,
+                                            len: 1,
+                                        },
+                                        name: WithSpan {
+                                            kind: Identifier,
+                                            content: "U",
+                                            pos: 875,
+                                            len: 1,
+                                        },
+                                    },
+                                ),
+                            },
+                            WithSpan {
+                                kind: SpecialChar(
+                                    AngleBracketClose,
+                                ),
+                                content: ">",
+                                pos: 876,
+                                len: 1,
+                            },
+                        ),
+                    ),
+                    parent_with_colon: Some(
+                        (
+                            WithSpan {
+                                kind: SpecialChar(
+                                    Colon,
+                                ),
+                                content: ":",
+                                pos: 877,
+                                len: 1,
+                            },
+                            WithSpan {
+                                kind: (),
+                                content: Single {
+                                    assem: "!",
+                                    ty: "System.Object",
+                                },
+                                pos: 878,
+                                len: 19,
+                            },
+                        ),
+                    ),
+                    where_clauses: Some(
+                        WhereClauses {
+                            kw_where: WithSpan {
+                                kind: Keyword(
+                                    Where,
+                                ),
+                                content: "where",
+                                pos: 897,
+                                len: 5,
+                            },
+                            clauses: [
+                                (
+                                    SingleWhereClause {
+                                        name: WithSpan {
+                                            kind: Identifier,
+                                            content: "T",
+                                            pos: 907,
+                                            len: 1,
+                                        },
+                                        ch_colon: WithSpan {
+                                            kind: SpecialChar(
+                                                Colon,
+                                            ),
+                                            content: ":",
+                                            pos: 908,
+                                            len: 1,
+                                        },
+                                        bindings: Punctuated {
+                                            inner: [
+                                                (
+                                                    WithSpan {
+                                                        kind: (),
+                                                        content: Single {
+                                                            assem: "!",
+                                                            ty: "System.Object",
+                                                        },
+                                                        pos: 910,
+                                                        len: 19,
+                                                    },
+                                                    WithSpan {
+                                                        kind: SpecialChar(
+                                                            Comma,
+                                                        ),
+                                                        content: ",",
+                                                        pos: 928,
+                                                        len: 1,
+                                                    },
+                                                ),
+                                            ],
+                                            last: Some(
+                                                WithSpan {
+                                                    kind: (),
+                                                    content: Single {
+                                                        assem: "!",
+                                                        ty: "System.IDisposable",
+                                                    },
+                                                    pos: 930,
+                                                    len: 24,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                    WithSpan {
+                                        kind: SpecialChar(
+                                            Semicolon,
+                                        ),
+                                        content: ";",
+                                        pos: 953,
+                                        len: 1,
+                                    },
+                                ),
+                                (
+                                    SingleWhereClause {
+                                        name: WithSpan {
+                                            kind: Identifier,
+                                            content: "U",
+                                            pos: 959,
+                                            len: 1,
+                                        },
+                                        ch_colon: WithSpan {
+                                            kind: SpecialChar(
+                                                Colon,
+                                            ),
+                                            content: ":",
+                                            pos: 960,
+                                            len: 1,
+                                        },
+                                        bindings: Punctuated {
+                                            inner: [],
+                                            last: Some(
+                                                WithSpan {
+                                                    kind: (),
+                                                    content: WithGeneric {
+                                                        assem: "!",
+                                                        ty: "System.Array`1",
+                                                        type_vars: {
+                                                            "@T": Generic(
+                                                                "@T",
+                                                            ),
+                                                        },
+                                                    },
+                                                    pos: 962,
+                                                    len: 28,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                    WithSpan {
+                                        kind: SpecialChar(
+                                            Semicolon,
+                                        ),
+                                        content: ";",
+                                        pos: 989,
+                                        len: 1,
+                                    },
+                                ),
+                            ],
+                        },
+                    ),
+                    ch_brace_open0: WithSpan {
+                        kind: SpecialChar(
+                            BraceOpen,
+                        ),
+                        content: "{",
+                        pos: 991,
+                        len: 1,
+                    },
+                    class_items: [
+                        Field(
+                            Field {
+                                kw_field: WithSpan {
+                                    kind: Keyword(
+                                        Field,
+                                    ),
+                                    content: "field",
+                                    pos: 997,
+                                    len: 5,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 1002,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Private,
+                                        ),
+                                        content: "private",
+                                        pos: 1003,
+                                        len: 7,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 1010,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "__object_array",
+                                    pos: 1012,
+                                    len: 14,
+                                },
+                                ch_colon: WithSpan {
+                                    kind: SpecialChar(
+                                        Colon,
+                                    ),
+                                    content: ":",
+                                    pos: 1026,
+                                    len: 1,
+                                },
+                                ty: WithSpan {
+                                    kind: (),
+                                    content: WithGeneric {
+                                        assem: "!",
+                                        ty: "System.Array`1",
+                                        type_vars: {
+                                            "@T": Single {
+                                                assem: "!",
+                                                ty: "System.Object",
+                                            },
+                                        },
+                                    },
+                                    pos: 1028,
+                                    len: 43,
+                                },
+                                ch_semicolon: WithSpan {
+                                    kind: SpecialChar(
+                                        Semicolon,
+                                    ),
+                                    content: ";",
+                                    pos: 1070,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                        Field(
+                            Field {
+                                kw_field: WithSpan {
+                                    kind: Keyword(
+                                        Field,
+                                    ),
+                                    content: "field",
+                                    pos: 1076,
+                                    len: 5,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 1081,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            InAssembly,
+                                        ),
+                                        content: "in-assembly",
+                                        pos: 1082,
+                                        len: 11,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 1093,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "__a",
+                                    pos: 1095,
+                                    len: 3,
+                                },
+                                ch_colon: WithSpan {
+                                    kind: SpecialChar(
+                                        Colon,
+                                    ),
+                                    content: ":",
+                                    pos: 1098,
+                                    len: 1,
+                                },
+                                ty: WithSpan {
+                                    kind: (),
+                                    content: Generic(
+                                        "@T",
+                                    ),
+                                    pos: 1100,
+                                    len: 2,
+                                },
+                                ch_semicolon: WithSpan {
+                                    kind: SpecialChar(
+                                        Semicolon,
+                                    ),
+                                    content: ";",
+                                    pos: 1102,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                        Method(
+                            Method {
+                                kw_method: WithSpan {
+                                    kind: Keyword(
+                                        Method,
+                                    ),
+                                    content: "method",
+                                    pos: 1108,
+                                    len: 6,
+                                },
+                                ch_bracket_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketOpen,
+                                    ),
+                                    content: "[",
+                                    pos: 1114,
+                                    len: 1,
+                                },
+                                modifiers: [
+                                    WithSpan {
+                                        kind: Keyword(
+                                            Public,
+                                        ),
+                                        content: "public",
+                                        pos: 1115,
+                                        len: 6,
+                                    },
+                                ],
+                                ch_bracket_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BracketClose,
+                                    ),
+                                    content: "]",
+                                    pos: 1121,
+                                    len: 1,
+                                },
+                                name: WithSpan {
+                                    kind: Identifier,
+                                    content: "GenericMethod",
+                                    pos: 1123,
+                                    len: 13,
+                                },
+                                generics: Some(
+                                    (
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                AngleBracketOpen,
+                                            ),
+                                            content: "<",
+                                            pos: 1136,
+                                            len: 1,
+                                        },
+                                        Punctuated {
+                                            inner: [],
+                                            last: Some(
+                                                GenericDef {
+                                                    ch_at: WithSpan {
+                                                        kind: SpecialChar(
+                                                            At,
+                                                        ),
+                                                        content: "@",
+                                                        pos: 1137,
+                                                        len: 1,
+                                                    },
+                                                    name: WithSpan {
+                                                        kind: Identifier,
+                                                        content: "T",
+                                                        pos: 1138,
+                                                        len: 1,
+                                                    },
+                                                },
+                                            ),
+                                        },
+                                        WithSpan {
+                                            kind: SpecialChar(
+                                                AngleBracketClose,
+                                            ),
+                                            content: ">",
+                                            pos: 1139,
+                                            len: 1,
+                                        },
+                                    ),
+                                ),
+                                ch_parenthesis_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisOpen,
+                                    ),
+                                    content: "(",
+                                    pos: 1140,
+                                    len: 1,
+                                },
+                                arguments: Punctuated {
+                                    inner: [],
+                                    last: None,
+                                },
+                                ch_parenthesis_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        ParenthesisClose,
+                                    ),
+                                    content: ")",
+                                    pos: 1141,
+                                    len: 1,
+                                },
+                                ch_arrow: WithSpan {
+                                    kind: SpecialChar(
+                                        Arrow,
+                                    ),
+                                    content: "=>",
+                                    pos: 1143,
+                                    len: 2,
+                                },
+                                ret_ty: WithSpan {
+                                    kind: (),
+                                    content: Single {
+                                        assem: "!",
+                                        ty: "System.Void",
+                                    },
+                                    pos: 1146,
+                                    len: 17,
+                                },
+                                where_clauses: Some(
+                                    WhereClauses {
+                                        kw_where: WithSpan {
+                                            kind: Keyword(
+                                                Where,
+                                            ),
+                                            content: "where",
+                                            pos: 1167,
+                                            len: 5,
+                                        },
+                                        clauses: [
+                                            (
+                                                SingleWhereClause {
+                                                    name: WithSpan {
+                                                        kind: Identifier,
+                                                        content: "T",
+                                                        pos: 1181,
+                                                        len: 1,
+                                                    },
+                                                    ch_colon: WithSpan {
+                                                        kind: SpecialChar(
+                                                            Colon,
+                                                        ),
+                                                        content: ":",
+                                                        pos: 1182,
+                                                        len: 1,
+                                                    },
+                                                    bindings: Punctuated {
+                                                        inner: [],
+                                                        last: Some(
+                                                            WithSpan {
+                                                                kind: (),
+                                                                content: Single {
+                                                                    assem: "!",
+                                                                    ty: "System.Object",
+                                                                },
+                                                                pos: 1184,
+                                                                len: 19,
+                                                            },
+                                                        ),
+                                                    },
+                                                },
+                                                WithSpan {
+                                                    kind: SpecialChar(
+                                                        Semicolon,
+                                                    ),
+                                                    content: ";",
+                                                    pos: 1202,
+                                                    len: 1,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                                ch_brace_open0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceOpen,
+                                    ),
+                                    content: "{",
+                                    pos: 1208,
+                                    len: 1,
+                                },
+                                statements: [],
+                                ch_brace_close0: WithSpan {
+                                    kind: SpecialChar(
+                                        BraceClose,
+                                    ),
+                                    content: "}",
+                                    pos: 1209,
+                                    len: 1,
+                                },
+                            },
+                        ),
+                    ],
+                    ch_brace_close0: WithSpan {
+                        kind: SpecialChar(
+                            BraceClose,
+                        ),
+                        content: "}",
+                        pos: 1211,
+                        len: 1,
+                    },
+                },
+            ),
+        ),
+    ],
+}
