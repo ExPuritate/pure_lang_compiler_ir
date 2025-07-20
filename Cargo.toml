@@ -4,17 +4,17 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-comp_shared = { package = "pure_lang_compiler_shared", path = "D:/pure_lang/compiler/compiler_shared" }
-comp_base = { package = "pure_lang_compiler_base", path = "D:/pure_lang/compiler/compiler_base" }
+comp_shared = { package = "pure_lang_compiler_shared", git = "https://github.com/ExPuritate/purelang_compiler_shared.git" }
+comp_base = { package = "pure_lang_compiler_base", git = "https://github.com/ExPuritate/purelang_compiler_base.git" }
 fancy-regex = "0.15.0"
 thiserror = "2.0.12"
 derive_more = { version = "2.0.1", features = ["full"] }
-peg = { version = "0.8.5", path = "../rust-peg" }
+peg = { version = "0.8.5", git = "https://github.com/ExPuritate/rust-peg.git" }
 const_format = "0.2.34"
 paste = "1.0.15"
 line-ending = "1.5.1"
 enumflags2 = { version = "0.7.12", features = ["std"] }
-binary = { path = "D:/pure_lang/binary", package = "pure_lang_binary" }
+binary = { git = "https://github.com/ExPuritate/purelang_binary.git", package = "pure_lang_binary" }
 
 [build-dependencies]
 

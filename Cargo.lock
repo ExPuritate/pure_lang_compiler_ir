@@ -465,6 +465,7 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 [[package]]
 name = "peg"
 version = "0.8.5"
+source = "git+https://github.com/ExPuritate/rust-peg.git#aec2c803fd7ab71250901617ba3870756a1b58b6"
 dependencies = [
  "peg-macros",
  "peg-runtime",
@@ -473,6 +474,7 @@ dependencies = [
 [[package]]
 name = "peg-macros"
 version = "0.8.5"
+source = "git+https://github.com/ExPuritate/rust-peg.git#aec2c803fd7ab71250901617ba3870756a1b58b6"
 dependencies = [
  "peg-runtime",
  "proc-macro2",
@@ -482,6 +484,7 @@ dependencies = [
 [[package]]
 name = "peg-runtime"
 version = "0.8.5"
+source = "git+https://github.com/ExPuritate/rust-peg.git#aec2c803fd7ab71250901617ba3870756a1b58b6"
 
 [[package]]
 name = "pin-project-lite"
@@ -562,6 +565,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_binary"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_binary.git#026308947f0ac54089c721c5ac744d1f5be1d0f1"
 dependencies = [
  "const_for",
  "derive_more",
@@ -575,6 +579,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_binary_proc_macros"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_binary.git#026308947f0ac54089c721c5ac744d1f5be1d0f1"
 dependencies = [
  "proc-macro-crate",
  "proc-macro2",
@@ -602,6 +607,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_compiler_base"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_compiler_base.git#28e4e721a3ca38e016a453420fe07c97208ddfe3"
 dependencies = [
  "memchr",
  "pure_lang_global",
@@ -613,6 +619,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_compiler_shared"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_compiler_shared.git#533c94c86915aa615af4f4712d88ab978b1ff7b5"
 dependencies = [
  "pure_lang_global",
 ]
@@ -620,6 +627,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_global"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_global.git#212d456996adb3ae754e9e709b7de335e243821d"
 dependencies = [
  "anyhow",
  "bon",
@@ -644,6 +652,7 @@ dependencies = [
 [[package]]
 name = "pure_lang_proc_macros"
 version = "0.1.0"
+source = "git+https://github.com/ExPuritate/purelang_global.git#212d456996adb3ae754e9e709b7de335e243821d"
 dependencies = [
  "convert_case 0.8.0",
  "proc-macro-crate",
