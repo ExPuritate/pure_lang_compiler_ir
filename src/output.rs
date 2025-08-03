@@ -2,7 +2,7 @@ use crate::ast::{Ast, ClassItem, Field, File, Method, TypeDef};
 use binary::Assembly;
 use comp_base::AnyResult;
 use comp_base::global::{IndexMap, StringName};
-use std::io::{Seek, Write};
+use std::io::Write;
 use std::mem::MaybeUninit;
 
 pub struct Output {
@@ -10,6 +10,7 @@ pub struct Output {
 }
 
 impl Output {
+    #[allow(unused)]
     pub fn new(file: File) -> Self {
         Self { file }
     }

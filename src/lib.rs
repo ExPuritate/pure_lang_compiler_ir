@@ -74,7 +74,9 @@ pub enum ParsingError {
 
 #[allow(nonstandard_style)]
 #[unsafe(no_mangle)]
-pub extern "Rust" fn INIT_COMPILER(config: &CompilerConfig) -> Box<dyn comp_shared::Compiler> {
+pub extern "Rust" fn INIT_COMPILER(
+    #[allow(unused)] config: &CompilerConfig,
+) -> Box<dyn comp_shared::Compiler> {
     Box::new(Compiler {
         sources: HashMap::new(),
     })
